@@ -1,0 +1,12 @@
+.icones {
+    font-size: 2rem;
+  }
+  
+  .icones a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .fa-instagram:hover {
+    color: #c13584
+  }
