@@ -13,11 +13,11 @@ export class AuthService {
     private http: HttpClient
   ) { }
   entrar(credentialsDTO:CredentialsDTO):Observable<CredentialsDTO>{
-    return this.http.post<CredentialsDTO>('https://aprochegue.herokuapp.com/usuario/credentials', credentialsDTO)
+    return this.http.post<CredentialsDTO>('https://aprochegue.herokuapp.com/usuarios/logar', credentialsDTO)
 
   }
   cadastrar(usuario:Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>('https://aprochegue.herokuapp.com/usuario/save', usuario)
+    return this.http.post<Usuario>('https://aprochegue.herokuapp.com/usuarios/cadastrar', usuario)
 
   }
   
