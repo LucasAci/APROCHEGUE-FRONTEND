@@ -10,16 +10,18 @@ import { EntrarComponent } from './entrar/entrar.component';
 
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    RodapeComponent
-    EntrarComponent
-    CadastrarComponent
-    SobreComponent
+    RodapeComponent,
+    EntrarComponent,
+    CadastrarComponent,
+    SobreComponent,
+    TemaComponent,
   ],
   imports: [
     BrowserModule,
