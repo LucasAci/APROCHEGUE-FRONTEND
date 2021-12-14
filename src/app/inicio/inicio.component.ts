@@ -16,9 +16,11 @@ export class InicioComponent implements OnInit {
    ) { }
 
   ngOnInit() {
-  if (environment.token == ' ' ){
+  if (environment.token == '' ){
     this.router.navigate(['/entrar'])
   }
+  this.authService.refreshToken()
+
   }
 
 }
