@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UsuarioLoginDTO } from '../model/UsuarioLoginDTO';
 import { Usuario } from '../model/Usuario';
@@ -13,6 +13,15 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   entrar(usuarioLoginDTO:UsuarioLoginDTO):Observable<UsuarioLoginDTO>{
     return this.http.post<UsuarioLoginDTO>('https://aprochegue.herokuapp.com/usuarios/logar', usuarioLoginDTO)
 
