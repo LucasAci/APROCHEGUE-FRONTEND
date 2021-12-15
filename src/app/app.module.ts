@@ -12,6 +12,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 
 
 
@@ -24,7 +25,8 @@ import { TemaComponent } from './tema/tema.component';
     CadastrarComponent,
     SobreComponent,
     InicioComponent,
-    TemaComponent
+    TemaComponent,
+    TemaEditComponent
   ],
   imports: [
     BrowserModule,
