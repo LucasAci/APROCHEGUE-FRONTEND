@@ -2,7 +2,7 @@
 export class UsuarioLoginDTO{
 public email: string;
 public foto: string;
-public idUsuario: number;
+public id: number;
 public nome: string;
 public senha: string;
 public tipo: string;
