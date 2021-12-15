@@ -12,7 +12,7 @@
             <div class="row d-flex justify-content-center mt-3 mb-5">
                 <div class="col-md-6">
                     <button class="btn btn-light mr-2"  data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-                    <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
+                    <a class="btn btn-outline-light" href="#postagemGen">Ver Postagens</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
 
 </div>
 
-<div class="container mb-5 mt-5 " id="postagens">
+<div class="container mb-5 mt-5 " id="postagemGen">
     <nav>
         <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
           <a class="nav-link active active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as Postagens</a>
@@ -131,7 +131,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success" (click)='publicar()' >Publicar</button>
+          <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
         </div>
       </div>
     </div>
