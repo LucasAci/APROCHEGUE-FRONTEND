@@ -24,7 +24,12 @@ export class PostagemService {
     return this.http.post<Postagem>('https://aprochegue.herokuapp.com/Postagem', postagem, this.token)
   }
 
-  
+  putPostagem(postagem:Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://aprochegue.herokuapp.com/Postagem',postagem,this.token)
+  }
 
+  getByIdPostagem(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(`https://aprochegue.herokuapp.com/postagens/${id}`,this.token)
+  }
 
 }
