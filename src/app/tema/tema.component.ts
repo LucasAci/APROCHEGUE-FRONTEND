@@ -12,6 +12,7 @@ import { TemaService } from '../service/tema.service';
 export class TemaComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
+  i: number
   constructor(
     private router: Router,
     private temaService: TemaService
@@ -26,7 +27,17 @@ export class TemaComponent implements OnInit {
   findAllTemas() {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
+
+      for (this.i = 1;this. i <= this.listaTemas.length; this.i++){
+        this.i
+      }
     })
+  }
+
+  numeroLista(){
+    for (let i = 1; i <= this.listaTemas.length; i++){
+      i
+    }
   }
   cadastrar() {
     this.temaService.postTema(this.tema).subscribe((resp: Tema) => {

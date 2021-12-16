@@ -31,6 +31,11 @@ export class AuthService {
 
   }
 
+  atualizar(usuario:Usuario):Observable<Usuario>{
+    return this.http.put<Usuario>('https://aprochegue.herokuapp.com/usuarios/atualizar', usuario, this.token)
+
+  }
+
   getByIdUser(id:number):Observable<Usuario>{
     return this.http.get<Usuario>(`https://aprochegue.herokuapp.com/usuarios/${id}`,this.token)
   }
