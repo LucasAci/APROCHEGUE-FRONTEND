@@ -1,7 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+<nav class="navbar navbar-expand-lg navbar-light bg-danger">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
-
     </button>
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto d-flex align-items-center">
@@ -15,7 +14,8 @@
             <a [routerLink]="['/user-edit', id]">
               <p class="text-white fs-16 m-0"><i class="fa fa-pencil-square-o " aria-hidden="true"></i></p>
             </a>
-          </li>   
+          </li> 
+
       </ul>
       <ul class="navbar-nav ml-auto d-flex align-items-center">
         <li class="nav-item pl-3">
@@ -24,11 +24,12 @@
 
       </ul>
 
-      <ul *ngIf= "this.tipo == 'Adm'" class="navbar-nav ml-auto d-flex align-items-center">
+      <ul class="navbar-nav ml-auto d-flex align-items-center">
         <li class="nav-item pl-3">
-            <a routerLink='/user-delete' class="m-0 font-weight-bold text-white .fs-16">ADMIN<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            <a routerLink='/cadastrar' class="m-0 font-weight-bold text-white .fs-16">ADMIN<i class="fa fa-sign-out" aria-hidden="true"></i></a>
           </li>
 
       </ul>
     </div>
+    
   </nav>

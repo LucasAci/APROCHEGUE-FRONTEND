@@ -3,19 +3,17 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: 'app-menu-adm',
+  templateUrl: './menu-adm.component.html',
+  styleUrls: ['./menu-adm.component.css']
 })
-export class MenuComponent implements OnInit {
+export class MenuAdmComponent implements OnInit {
 
   nome = environment.nome
 
   foto = environment.foto
 
   id = environment.id
-
-  tipo = environment.tipo 
 
   constructor(
     private router: Router
@@ -32,6 +30,4 @@ export class MenuComponent implements OnInit {
     environment.id = 0
 
   }
-
-
 }
