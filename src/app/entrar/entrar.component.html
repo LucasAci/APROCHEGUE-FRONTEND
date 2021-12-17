@@ -10,7 +10,9 @@
     
                     <h1 class="text-center mb-3">Entrar</h1>
     
-                    <div class="form-group">
+                    <form>
+
+                        <div class="form-group">
                         <label for="usuario">Usuário</label>
                         <input [(ngModel)]='userLogin.email' class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
                     </div>
@@ -23,6 +25,8 @@
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-info" (click)='entrar()'>Entrar</button>
                     </div>
+                    
+                </form>
     
                     <hr class="mt-5 mb-5">
     

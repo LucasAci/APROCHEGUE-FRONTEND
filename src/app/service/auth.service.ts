@@ -40,6 +40,14 @@ export class AuthService {
     return this.http.get<Usuario>(`https://aprochegue.herokuapp.com/usuarios/${id}`,this.token)
   }
 
+  deleteUser(id:number){
+    return this.http.delete(`https://aprochegue.herokuapp.com/usuarios/${id}`,this.token)
+  }
+
+  getAllUser(): Observable<Usuario[]>{
+    return this.http.get<Usuario[]>('https://aprochegue.herokuapp.com/usuarios/all', this.token)
+  }
+
 
   logado(){
     let ok: boolean = false
