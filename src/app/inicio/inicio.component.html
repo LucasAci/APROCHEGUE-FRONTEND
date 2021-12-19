@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-    <div class="row bg-dark d-flex align-items-center">
+    <div class="row bg-secondary d-flex align-items-center">
         <div class="col-md-6">
 
             <div class="row d-flex justify-content-center">
@@ -11,8 +11,8 @@
             </div>
             <div class="row d-flex justify-content-center mt-3 mb-5">
                 <div class="col-md-6">
-                    <button class="btn btn-light mr-2"  data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-                    <a class="btn btn-outline-light" href="#postagemGeneration">Ver Postagens</a>
+                    <button class="btn laranja mr-2 text-light"  data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                    <a class="btn laranja text-light" href="#postagens">Ver Postagens</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
 
 </div>
 
-<div class="container mb-5 mt-5 " id="postagemGeneration">
+<div class="container mb-5 mt-5 " id="postagens">
     <nav>
         <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
           <a class="nav-link active active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as Postagens</a>
@@ -47,7 +47,10 @@
                 <p class="card-text mt-3">{{item.texto}}</p>
                 <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
                     'HH:mm'}} </small></p>
-                <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+                
+                <img src="{{item.usuario.foto}}" width="100px" height="100px" alt="foto" class="rounded-circle">
+                <p class="card-text"><small class="text-muted">By: {{item.usuario.nome}}</small></p>
+                <p class="card-text"><small class="text-muted">Email: {{item.usuario.email}}</small></p>
               </div>
             </div>
           </div>
