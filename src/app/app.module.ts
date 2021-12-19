@@ -20,6 +20,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { MenuAdmComponent } from './menu-adm/menu-adm.component';
 import { UserDeleteComponent } from './delete/user-delete/user-delete.component';
+import { FormularioComponent } from './formulario/formulario.component';
 
 
 
@@ -40,7 +41,8 @@ import { UserDeleteComponent } from './delete/user-delete/user-delete.component'
     PostagemDeleteComponent,
     UserEditComponent,
     MenuAdmComponent,
-    UserDeleteComponent
+    UserDeleteComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,

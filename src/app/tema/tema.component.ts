@@ -13,6 +13,8 @@ export class TemaComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   i: number
+
+  tipo = environment.tipo 
   constructor(
     private router: Router,
     private temaService: TemaService

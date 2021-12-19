@@ -1,6 +1,6 @@
 #img-bg {
-    background-image: url("https://yt3.ggpht.com/ytc/AKedOLRjvByRIGcZ5kubNLZZyGkJKJM_Euv8iv4TdO1j=s900-c-k-c0x00ffffff-no-rj");
-
+    /* background-image: url("https://yt3.ggpht.com/ytc/AKedOLRjvByRIGcZ5kubNLZZyGkJKJM_Euv8iv4TdO1j=s900-c-k-c0x00ffffff-no-rj"); */
+    background-image: url("../../assets/imgs/AprochegueLaranja.png");
     min-height: 695px;
     background-repeat: no-repeat;
     background-size: cover;

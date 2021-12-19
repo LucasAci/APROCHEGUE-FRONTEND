@@ -1,0 +1,76 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 mt-5 mb-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+                    <h1 class="text-center">Formulário de requisição</h1>
+
+                    
+
+                    <!-- <div class="container">
+                        <h1>FormSubmit Demo</h1>
+                        <form target="_blank" action="https://formsubmit.co/aprocheguecontato@gmail.com" method="POST">
+                          <div class="form-group">
+                            <div class="form-row">
+                              <div class="col">
+                                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                              </div>
+                              <div class="col">
+                                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+                        </form>
+                      </div> -->
+
+
+
+
+
+                    <div class="form-group">
+
+                        <div class="form-group">
+    
+                            <label for="tipo">Requisição</label> 
+                            <select class="form-control" name="tipo" id="tipo" >
+                                <option value="">Selecione uma das opções</option>
+                                <option value="Adm">Solicitação de conta ADM</option>
+                                <option value="DR">Denúncias e reclamações</option>
+                                <option value="tema">Solicitação de tema</option>
+                            </select>
+                        </div>
+    
+                        <label for="nome">Nome</label>
+                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome" >
+                    </div>
+                    <div class="form-group">
+    
+                        <label for="email">E-mail</label>
+                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Texto</label>
+                        <textarea class='form-control' name="texto" id="texto"  rows="10"></textarea>
+                    </div>
+                    
+                    <div class="d-flex justify-content-center">
+
+                        <button type="submit" class="btn btn-danger mr-4"routerLink="/entrar">Cancelar</button>
+                        <button  type="submit" class="btn btn-success">Enviar</button>
+
+                    </div> 
+
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

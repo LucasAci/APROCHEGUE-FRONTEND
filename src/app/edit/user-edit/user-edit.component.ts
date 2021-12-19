@@ -42,7 +42,7 @@ export class UserEditComponent implements OnInit {
 
   atualizar(){
     console.log(this.usuario)
-    this.usuario.tipo = this.tipoUsuario
+    this.usuario.tipo = "Normal"
     
     if(this.usuario.senha != this.confirmarSenha){
       alert('As senhas estão diferentes.')

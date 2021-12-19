@@ -1,5 +1,6 @@
 #img-bg{
-    background-image: url("https://i.pinimg.com/564x/87/cb/b1/87cbb12acc6c812f674a68aecf2d35f9.jpg");
+    /* background-image: url("https://i.pinimg.com/564x/87/cb/b1/87cbb12acc6c812f674a68aecf2d35f9.jpg"); */
+    background-image: url("../../assets/imgs/AprochegueBranco.png");
     min-height: 695px;
     background-position: center;
     background-repeat: no-repeat;

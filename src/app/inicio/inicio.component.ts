@@ -20,6 +20,7 @@ export class InicioComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number 
+  tipo = environment.tipo 
 
 
   user: Usuario = new Usuario()

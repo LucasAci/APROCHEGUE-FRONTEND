@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-    <div class="row bg-secondary d-flex align-items-center">
+    <div class="row bg-dark d-flex align-items-center">
         <div class="col-md-6">
 
             <div class="row d-flex justify-content-center">
@@ -12,14 +12,14 @@
             <div class="row d-flex justify-content-center mt-3 mb-5">
                 <div class="col-md-6">
                     <button class="btn btn-light mr-2"  data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-                    <a class="btn btn-outline-light" href="#postagemGen">Ver Postagens</a>
+                    <a class="btn btn-outline-light" href="#postagemGeneration">Ver Postagens</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 d-flex justify-content-center">
-            <img src="https://files.passeidireto.com/1cc481c0-d28a-4f01-814f-1d9c0d3d2a26/1cc481c0-d28a-4f01-814f-1d9c0d3d2a26.jpeg"
-                alt="" width="500px" height="500px">
+            <img src="../../assets/imgs/AprocheguePreto.png"
+                alt="" width="700px" height="600px">
         </div>
     </div>
 
@@ -28,7 +28,7 @@
 
 </div>
 
-<div class="container mb-5 mt-5 " id="postagemGen">
+<div class="container mb-5 mt-5 " id="postagemGeneration">
     <nav>
         <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
           <a class="nav-link active active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as Postagens</a>
@@ -123,8 +123,17 @@
           
         </div>
 
-        <div class="form-group">
-          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>Cadastre um novo</a>:</label>
+        <div *ngIf= "this.tipo == 'Normal'" class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/formulario'>Sugira um novo</a>:</label>
+          <select   name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+          </select>
+          
+          
+        </div>
+
+        <div *ngIf= "this.tipo == 'Adm'" class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:</label>
           <select   name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
             <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
           </select>
