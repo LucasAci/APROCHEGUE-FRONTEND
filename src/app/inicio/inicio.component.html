@@ -183,7 +183,7 @@
         </div>
 
         <div *ngIf= "this.tipo == 'Normal'" class="form-group">
-          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/formulario'>Sugira um novo</a>:</label>
+          <label for="texto">Escolha um tema ou <a  href="https://ad4nv1.github.io/FORMUL-RIO-PROJETO-INTEGRADOR/" target="_blank">sugira um novo</a>:</label>
           <select   name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
             <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
           </select>

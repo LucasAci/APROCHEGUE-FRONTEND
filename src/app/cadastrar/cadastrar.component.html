@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6" id="img-bg"></div>
@@ -35,11 +34,11 @@
     
                         <!-- <label for="tipo">Termos</label> -->
                         <label  for="termos">Termos: </label>
-                        <input class="ml-2" type="checkbox" name="Termos" id="Termosid" value="aceitar" > 
+                        <input class="ml-2" type="checkbox" name="Termos" data-toggle="cadastrarButton" id="Termosid" value="aceitar" > 
                         
-                        <!-- <a data-toggle="modal" data-target="#termosDeUso"> Li e aceito.</a> -->
+                        <a data-toggle="modal" data-target="#termosDeUso" class='linkModal'> Li e aceito.</a>
 
-                        <button class="btn laranja mr-2 text-dark"  data-toggle="modal" data-target="#termosDeUso">Li e aceito.</button>
+                        <!-- <button class="btn laranja mr-2 text-dark"  data-toggle="modal" data-target="#termosDeUso">Li e aceito.</button> -->
                         <!-- <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
                             <option value="">Selecione um tipo de usuário:</option>
                             <option value="Normal">Normal</option>
@@ -49,11 +48,11 @@
                     <div class="d-flex justify-content-center">
 
                         <button type="submit" class="btn btn-danger mr-4"routerLink="/entrar">Cancelar</button>
-                        <button  type="submit" class="btn btn-success"(click)='cadastrar()'>Cadastrar</button>
+                        <button id='cadastrarButton' type="submit" class="btn btn-success"(click)='cadastrar()' >Cadastrar</button>
 
                     </div>
                     <div>
-                        <a class="d-flex justify-content-center btn btn-outline-dark mt-5" routerLink='/formulario'>Solicitar conta de administrador</a>
+                        <a class="d-flex justify-content-center btn btn-outline-dark mt-5" href="https://ad4nv1.github.io/FORMUL-RIO-PROJETO-INTEGRADOR/" target="_blank">Solicitar conta de administrador</a>
                     </div>
 
                 </div>
