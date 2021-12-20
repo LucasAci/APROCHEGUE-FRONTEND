@@ -1,5 +1,5 @@
 .fundo{
-    background-color: black;
+    background-color: #eedece;
 
 }
 
@@ -9,4 +9,8 @@
 
 .bege{
     background-color:gray;
+}
+
+.forFont{
+    background-color: #30384c;
 }
