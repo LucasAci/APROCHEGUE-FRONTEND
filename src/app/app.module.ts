@@ -21,6 +21,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { MenuAdmComponent } from './menu-adm/menu-adm.component';
 import { UserDeleteComponent } from './delete/user-delete/user-delete.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -50,7 +51,7 @@ import { FormularioComponent } from './formulario/formulario.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

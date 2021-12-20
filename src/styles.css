@@ -10,3 +10,12 @@ html{
 .fs-18{
     font-size: 18pt;
 }
+
+.orange{
+    background-color:orangered;
+}
+
+
+.text-orange{
+    text-decoration-color: orangered;
+}
