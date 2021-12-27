@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <div class="col-md-6" id="img-bg"></div>
         <div class="col-md-6 mt-5 mb-5">
@@ -31,12 +31,7 @@
                         <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
                     </div>
                     <div class="form-group">
-    
-                        <!-- <label for="tipo">Termos</label> -->
-                        <label  for="termos">Termos: </label>
-                        <input class="ml-2" type="checkbox" name="Termos" data-toggle="cadastrarButton" id="Termosid" value="aceitar" > 
-                        
-                        <a data-toggle="modal" data-target="#termosDeUso" class='linkModal'> Li e aceito.</a>
+    -->
 
                         <!-- <button class="btn laranja mr-2 text-dark"  data-toggle="modal" data-target="#termosDeUso">Li e aceito.</button> -->
                         <!-- <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
@@ -44,7 +39,7 @@
                             <option value="Normal">Normal</option>
                             <option value="Adm">Administrador</option>
                         </select> -->
-                    </div>
+                    <!-- </div>
                     <div class="d-flex justify-content-center">
 
                         <button type="submit" class="btn btn-danger mr-4"routerLink="/entrar">Cancelar</button>
@@ -61,7 +56,7 @@
 
         </div>
     </div>
-</div>
+</div> -->
 
 
 <!-- Modal -->
@@ -81,6 +76,119 @@
       </div>
     </div>
   </div> -->
+
+
+
+
+
+
+
+
+
+  <body  >
+    
+
+    <div class="wrapper fadeInDown p2">
+ 
+
+        <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+                    
+        <style>
+            @import url('http://fonts.cdnfonts.com/css/gotham');
+    </style>
+    
+    
+    
+        <link href="http://fonts.cdnfonts.com/css/xilosa" rel="stylesheet">
+        <style>
+            @import url('http://fonts.cdnfonts.com/css/xilosa');
+            </style>
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active p1 "> Cadastrar </h2>
+          <!-- <h2 class="inactive underlineHover"> <a href=""></a>  Inscreva-se </h2> -->
+      
+          <!-- Icon -->
+          <div class="fadeIn first mb-3">
+            <img src="assets/img/aprochegue-logo-removebg-preview.png" alt="logo" width="100px" height="100px">
+          </div>
+      
+          <!-- Login Form -->
+          <form>
+            <input [(ngModel)] = 'usuario.nome' class="form-control" type="text" name="Seu nome"
+            id="usuario" placeholder="Seu nome">
+
+            <input [(ngModel)] ='usuario.email'  class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuario">
+
+            <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="imagem" id="imagem" placeholder="Link da foto">
+    
+            <input (input)='confirmSenha($event)'  class="form-control" type="password" name="senha" id="senha" placeholder="senha">
+
+            <input [(ngModel)]='usuario.senha'   class="form-control" type="password" name="confirmarsenha" id="confirmarsenha" placeholder="confirmar senha">
+          
+            <!-- <select class="form-control"  name="tipo" id="tipo" placeholder="selecione o tipo do usuario" (change)='tipoUser($event)'>
+                <option >Selecione um tipo de usuario</option>
+                <option value="administrador">Administrador</option>
+                <option value="padrão">Padrão</option>
+            </select> -->
+
+            <div class="d-flex justify-content-center mt-5 ">
+                <button type="submit" class="btn h3 mr-3 text-light" (click)='cadastrar()' >Cadastrar</button>
+                <button type="submit" class="btn h4 text-light" routerLink='/entrar'>Cancelar</button>
+            </div>
+
+            <div>
+              <a class="d-flex justify-content-center btn btn-outline-dark mt-5" href="https://ad4nv1.github.io/FORMUL-RIO-PROJETO-INTEGRADOR/" target="_blank">Solicitar conta de administrador</a>
+          </div>
+
+           
+          </form>
+      
+          
+        </div>
+    
+        
+      </div>
+
+
+</body>
+
+ <!-- Modal  -->
+ <div class="modal fade" id="termosDeUso" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Termos de uso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
