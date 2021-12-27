@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
@@ -13,6 +14,7 @@ export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario()
   confirmarSenha: string
   tipoUsuario: string
+  formulario: FormGroup
   constructor(
     private authService: AuthService,
     private router: Router
