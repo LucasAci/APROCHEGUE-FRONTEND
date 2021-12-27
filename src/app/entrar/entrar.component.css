@@ -1,5 +1,5 @@
 #img-bg {
-    background-image: url("https://yt3.ggpht.com/ytc/AKedOLRjvByRIGcZ5kubNLZZyGkJKJM_Euv8iv4TdO1j=s900-c-k-c0x00ffffff-no-rj"); 
+   /* background-image: url("https://yt3.ggpht.com/ytc/AKedOLRjvByRIGcZ5kubNLZZyGkJKJM_Euv8iv4TdO1j=s900-c-k-c0x00ffffff-no-rj");  */
     background-image: url("../../assets/imgs/AprochegueLaranja.png");
     min-height: 695px;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@
 
 
 .fundo{
-    background-image: url("https://envato-shoebox-0.imgix.net/ca4d/9c64-1ca1-4365-a636-7b5576fb2cbc/A18A7494b.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=e61c24051ce4df4126a5434284f0f7e5");
+    background-image: url("../../assets/imgs/AprochegueLaranja.png");
     min-height: 100%;
     background-repeat: no-repeat;
     background-size: cover;

@@ -110,7 +110,7 @@
       
           <!-- Icon -->
           <div class="fadeIn first mb-3">
-            <img src="assets/img/aprochegue-logo-removebg-preview.png" alt="logo" width="100px" height="100px">
+            <img src="../../assets/imgs/LOGO01-03.png" alt="logo" width="100px" height="100px">
           </div>
       
           <!-- Login Form -->
@@ -125,6 +125,11 @@
             <input (input)='confirmSenha($event)'  class="form-control" type="password" name="senha" id="senha" placeholder="senha">
 
             <input [(ngModel)]='usuario.senha'   class="form-control" type="password" name="confirmarsenha" id="confirmarsenha" placeholder="confirmar senha">
+
+            <label  for="termos">Termos: </label>
+            <input class="ml-2" type="checkbox" name="Termos" data-toggle="cadastrarButton" id="Termosid" value="aceitar" > 
+                        
+            <a data-toggle="modal" data-target="#termosDeUso" class='linkModal'> Li e aceito.</a>
           
             <!-- <select class="form-control"  name="tipo" id="tipo" placeholder="selecione o tipo do usuario" (change)='tipoUser($event)'>
                 <option >Selecione um tipo de usuario</option>
