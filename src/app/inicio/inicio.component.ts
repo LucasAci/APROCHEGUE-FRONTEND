@@ -23,6 +23,7 @@ export class InicioComponent implements OnInit {
   tipo = environment.tipo 
   foto: string
   email: string
+ 
 
 
   user: Usuario = new Usuario()
@@ -81,7 +82,8 @@ export class InicioComponent implements OnInit {
     publicar(){
       this.tema.id = this.idTema
       this.postagem.tema = this.tema
-  
+     
+
      this.user.id = this.idUser
      this.postagem.usuario = this.user
     this.user.foto =this.foto 
