@@ -99,3 +99,13 @@ body {
 .user-info small {
   color: #545d7a;
 }
+
+
+.carrossel{
+  width: 150px;
+  /* height: 100px; */
+}
+.carousel-inner > .carousel-item > img {
+  width: 100%;
+  height: 500px; 
+}

@@ -34,4 +34,10 @@ export class MenuComponent implements OnInit {
   }
 
 
+  scroll = (): void => {
+    
+
+  }
+
+
 }

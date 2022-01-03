@@ -42,8 +42,8 @@
 
 
 .fundo{
-    background-image: url("../../assets/imgs/AprochegueLaranja.png");
-    min-height: 100%;
+    background-image: url("../../assets/imgs/arte para carrosel_Prancheta 1.png");
+    /* min-height: 100%; */
     background-repeat: no-repeat;
     background-size: cover;
 }
