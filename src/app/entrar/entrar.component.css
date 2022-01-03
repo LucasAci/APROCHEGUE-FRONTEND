@@ -1,6 +1,6 @@
 #img-bg {
    /* background-image: url("https://yt3.ggpht.com/ytc/AKedOLRjvByRIGcZ5kubNLZZyGkJKJM_Euv8iv4TdO1j=s900-c-k-c0x00ffffff-no-rj");  */
-    background-image: url("../../assets/imgs/AprochegueLaranja.png");
+    /* background-image: url("../../assets/imgs/AprochegueLaranja.png"); */
     min-height: 695px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +17,7 @@
 
 
 #img-bg{
-    background-image: url('https://guiaanimal.net/uploads/content/image/36035/tartaruga_4.png');
+    /* background-image: url('https://guiaanimal.net/uploads/content/image/36035/tartaruga_4.png'); */
 
     min-height: 695px;
 
@@ -42,7 +42,7 @@
 
 
 .fundo{
-    background-image: url("../../assets/imgs/arte para carrosel_Prancheta 1.png");
+    /* background-image: url("../../assets/imgs/arte para carrosel_Prancheta 1.png"); */
     /* min-height: 100%; */
     background-repeat: no-repeat;
     background-size: cover;

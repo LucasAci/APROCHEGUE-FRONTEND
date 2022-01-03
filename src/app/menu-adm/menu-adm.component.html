@@ -1,35 +1,96 @@
+<!-- navbar  -->
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="navbar-nav mr-auto d-flex align-items-center">
-          <li class="nav-item active">
-            <img src="{{foto}}" alt="imagem do user" width="50px" height="50px" class="img-fluid rounded-circle">
-          </li>
-          <li class="nav-item pl-3">
-            <p class="m-0 font-weight-bold text-white .fs-16">Olá, {{nome}}</p>
-          </li>
-          <li class="nav-item pl-3">
-            <a [routerLink]="['/user-edit', id]">
-              <p class="text-white fs-16 m-0"><i class="fa fa-pencil-square-o " aria-hidden="true"></i></p>
-            </a>
-          </li> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <li class="nav-item active">
+        <img src="{{foto}}" alt="imagem do user" width="50px" height="50px" class="img-fluid rounded-circle">
+      </li>
+      <li class="nav-item pl-3">
+        <p class="m-0 font-weight-bold text-white .fs-16">Olá, {{nome}}</p>
+      </li>
+      <li class="nav-item pl-3">
+        <a [routerLink]="['/user-edit', id]">
+          <p class="text-white fs-16 m-0"><i class="fa fa-pencil-square-o " aria-hidden="true"></i></p>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item pl-3">
+        <a (click)='sair()' class="m-0 font-weight-bold text-white .fs-16">Sair <i class="fa fa-sign-out"
+            aria-hidden="true"></i></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item pl-3">
+        <a routerLink='/cadastrar' class="m-0 font-weight-bold text-white .fs-16">ADMIN<i class="fa fa-sign-out"
+            aria-hidden="true"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- navbar  -->
 
-      </ul>
-      <ul class="navbar-nav ml-auto d-flex align-items-center">
-        <li class="nav-item pl-3">
-            <a (click)='sair()' class="m-0 font-weight-bold text-white .fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
-          </li>
+<!-- apresentação do usuário -->
 
-      </ul>
+<div class="container-fluid">
 
-      <ul class="navbar-nav ml-auto d-flex align-items-center">
-        <li class="nav-item pl-3">
-            <a routerLink='/cadastrar' class="m-0 font-weight-bold text-white .fs-16">ADMIN<i class="fa fa-sign-out" aria-hidden="true"></i></a>
-          </li>
-
-      </ul>
+  <div class="row fundo d-flex align-items-center">
+    <div class="col-md-4">
+      <div class="row d-flex justify-content-center">
+        <img src="{{foto}}" alt="imagem " width=300px height=300px class="rounded-circle" id="imagemUser">
+      </div>
     </div>
+
+
+    <div class="col-md-8 d-flex justify-content-center">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+          <h1 class="fs-50">Aprochegue-se!</h1>
+          <h5 class='fs-18'>Aqui está o seu mural de atividades!!! Otimize seu perfil com a sua cara!!!</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- apresentação do usuário -->
+
+
+
+<!-- cards de publicações -->
+<div class="container mb-5 mt-5 " id="postagens">
+  <div class="tab-content mt-5" id="nav-tabContent">
+
     
-  </nav>
+      <div class="card text-center" *ngFor='let item of user.postagem'>
+        <div class="card-header ">
+          <h5 class="card-title m-0">{{item.titulo}}</h5>
+        </div>
+        <div class="card-body">
+          <small class='text-muted'>Tema: {{item.tema.descricao}}</small>
+          <div class="card-header">
+            <img  alt="imagem " width=200px height=200px src="{{item.foto}}" alt="foto"/>
+          </div>
+          <p class="card-text">{{item.texto}}</p>
+        </div>
+        <div class="card-footer text-muted">
+          <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date |
+              date:'HH:mm'}} </small></p>
+          <a [routerLink]="['/postagem-edit',item.id]" class="text-info mr-3" href="">Editar</a>
+          <a [routerLink]="['/postagem-delete',item.id]" class="text-danger" href="">Apagar</a>
+        </div>
+      </div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<!-- cards de publicações -->

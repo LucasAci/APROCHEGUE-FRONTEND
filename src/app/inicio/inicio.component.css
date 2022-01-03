@@ -109,3 +109,40 @@ body {
   width: 100%;
   height: 500px; 
 }
+
+
+
+
+
+
+
+
+
+
+body{
+  --navbar-scroll: transparent; 
+  --navbar-scroll-text: rgba(230, 52, 52, 0.781);
+  --navbar-scroll-shadow: none;
+ }
+
+
+
+.navbarNew {
+  background-color: var(--navbar-scroll);
+  transition: background-color 1s ease;
+  color: var(--navbar-scroll-text);
+  -webkit-box-shadow: var(--navbar-scroll-shadow);
+  box-shadow: var(--navbar-scroll-shadow);
+}
+
+
+.l-cards {
+  display: grid;
+  grid-gap: 30px;
+   /* grid-template-columns: repeat(3, 300px);
+   grid-template-columns: repeat(auto-fit, 300px); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  padding: 30px;
+}
