@@ -121,7 +121,7 @@ body {
 
 body{
   --navbar-scroll: transparent; 
-  --navbar-scroll-text: rgba(230, 52, 52, 0.781);
+  --navbar-scroll-text: #000000c7;
   --navbar-scroll-shadow: none;
  }
 
@@ -133,6 +133,10 @@ body{
   color: var(--navbar-scroll-text);
   -webkit-box-shadow: var(--navbar-scroll-shadow);
   box-shadow: var(--navbar-scroll-shadow);
+}
+
+.textCor{
+  color: black;
 }
 
 
