@@ -47,9 +47,11 @@ a:hover {
   text-decoration: underline;
 }
 
+
 .container{
   margin-bottom: 15px;
 }
+
 
 .infocardContainer {
   display: flex;
