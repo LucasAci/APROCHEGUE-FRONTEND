@@ -24,12 +24,21 @@
             aria-hidden="true"></i></a>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto d-flex align-items-center">
+    <!-- <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item pl-3">
+        <a routerLink='/user-delete' class="m-0 font-weight-bold text-white .fs-16">ADMIN<i class="fa fa-sign-out"
+            aria-hidden="true"></i></a>
+      </li>
+    </ul> -->
+
+    <ul *ngIf="this.tipoInicio == 'Adm'" class="navbar-nav ml-auto d-flex align-items-center">
       <li class="nav-item pl-3">
         <a routerLink='/user-delete' class="m-0 font-weight-bold text-white .fs-16">ADMIN<i class="fa fa-sign-out"
             aria-hidden="true"></i></a>
       </li>
     </ul>
+
+    
   </div>
 </nav>
 <!-- navbar  -->

@@ -26,6 +26,8 @@ export class MenuAdmComponent implements OnInit {
 
   listaPostagens : Postagem[]
 
+  tipoInicio = environment.tipo 
+
 
   tema: Tema = new Tema()
   listaTemas: Tema[]

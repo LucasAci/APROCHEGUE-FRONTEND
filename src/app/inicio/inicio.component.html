@@ -7,40 +7,53 @@
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto d-flex align-items-center">
       <li class="nav-item active">
-        <a routerLink='/tela-usuario'><img src="{{fotoInicio}}" alt="imagem do user" width="50px" height="50px"
-            class="img-fluid rounded-circle"> </a>
+        <img src="{{fotoInicio}}" alt="imagem do user" width="50px" height="50px"
+            class="img-fluid rounded-circle"> 
       </li>
-      <li class="nav-item pl-3">
-        <p class="m-0 font-weight-bold text-white .fs-16">Olá, {{nome}}</p>
-      </li>
-      <li class="nav-item pl-3">
-        <a [routerLink]="['/user-edit', id]">
-          <p class="text-white fs-16 m-0"><i class="fa fa-pencil-square-o " aria-hidden="true"></i></p>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-expanded="false">
+          Menu
         </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/user-edit', id]">Editar</a>
+          <a class="dropdown-item" routerLink='/tela-usuario'>Visualizar perfil</a>
+          <div class="dropdown-divider"></div>
+          <div *ngIf="this.tipoInicio == 'Adm'">
+            <a class="dropdown-item" routerLink='/user-delete' >Administrador</a>
+          </div>
+        </div>
       </li>
-      <div class="nav d-flex justify-content-center text-light" id="nav-tab" role="tablist">
-        <a class="nav-link active active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab"
-          href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as
-          Postagens</a>
-        <a (click)='findByIdUser()' class="nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab"
-          data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens"
-          aria-selected="false">Minhas Postagens</a>
-        <a class="nav-link text-secondary font-weight-bold" id="nav-contact-tab" data-toggle="tab" href="#postagemTema"
-          role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema</a>
-      </div>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#novaPostagem">Realizar uma postagem</a>
-      </li>
+
+
+
+
+      
     </ul>
+
+    <ul class="navbar-nav mr-auto ml-auto d-flex align-items-center">
+    <div class="nav d-flex justify-content-center text-dark" id="nav-tab" role="tablist">
+      <a class="nav-link active active  font-weight-bold text-dark" id="nav-todasPostagens-tab" data-toggle="tab"
+        href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as
+        Postagens</a>
+      <a class="nav-link font-weight-bold text-dark" id="nav-contact-tab" data-toggle="tab" href="#postagemTema"
+        role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema</a>
+    </div>
+
+
+
+ 
+    
+    <li class="nav-item">
+      <a class="btn nav-link font-weight-bold text-dark" data-toggle="modal" data-target="#novaPostagem">Realizar uma postagem</a>
+    </li>
+  </ul>
+
+
     <ul class="navbar-nav ml-auto d-flex align-items-center">
       <li class="nav-item pl-3">
-        <a (click)='sair()' class="m-0 font-weight-bold text-white .fs-16">Sair <i class="fa fa-sign-out"
-            aria-hidden="true"></i></a>
-      </li>
-    </ul>
-    <ul *ngIf="this.tipoInicio == 'Adm'" class="navbar-nav ml-auto d-flex align-items-center">
-      <li class="nav-item pl-3">
-        <a routerLink='/user-delete' class="m-0 font-weight-bold text-white .fs-16">ADMIN<i class="fa fa-sign-out"
+        <a (click)='sair()' class="m-2 font-weight-bold text-dark .fs-16">Sair <i class="fa fa-sign-out"
             aria-hidden="true"></i></a>
       </li>
     </ul>
@@ -71,8 +84,7 @@
   </button>
 </div>
 <!-- carrossel -->
-
-<!-- Cards de publicações : -->
+ 
 <div class="container mb-5 mt-5 d-flex justify-content-center" id="postagens">
   <div class="tab-content mt-5" id="nav-tabContent">
 
@@ -97,6 +109,7 @@
                 <small>{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
                   'HH:mm'}}</small>
               </div>
+              
             </div>
           </div>
         </div>
@@ -197,3 +210,5 @@
     </div>
   </div>
 </div>
+
+
