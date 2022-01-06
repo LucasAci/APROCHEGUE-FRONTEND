@@ -76,16 +76,12 @@
             @import url('http://fonts.cdnfonts.com/css/xilosa');
             </style>
         <div id="formContent">
-          <!-- Tabs Titles -->
           <p class="active p1 "> Atualizar meu usuário</p>
-          <!-- <h2 class="inactive underlineHover"> <a href=""></a>  Inscreva-se </h2> -->
       
-          <!-- Icon -->
           <div class="fadeIn first mb-1">
             <img src="../../assets/imgs/LOGO01-03.png" alt="logo" width="90px" height="90px">
           </div>
       
-          <!-- Login Form -->
           <form>
             <div class="row d-flex justify-content-center">
               <div class="col-md-10">
@@ -104,8 +100,8 @@
             <input (input)='confirmSenha($event)'  class="form-control" type="password" name="senha" id="senha" placeholder="senha">
             <label for="confirmSenha">Confirmar Senha</label>
             <input [(ngModel)]='usuario.senha'   class="form-control mb-3" type="password" name="confirmarsenha" id="confirmarsenha" placeholder="confirmar senha">
-            <button type="submit" class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
-            <button type="submit" class="btn btn-success" (click)='atualizar()' >Atualizar</button>
+            <button type="submit" class="btn btn-danger mr-4 mb-5" routerLink='/inicio'>Cancelar</button>
+            <button type="submit" class="btn btn-success mb-5" (click)='atualizar()' >Atualizar</button>
               </div>
               
 

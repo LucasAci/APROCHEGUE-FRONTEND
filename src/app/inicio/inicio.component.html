@@ -7,8 +7,7 @@
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto d-flex align-items-center">
       <li class="nav-item active">
-        <img src="{{fotoInicio}}" alt="imagem do user" width="50px" height="50px"
-            class="img-fluid rounded-circle"> 
+        <img src="{{fotoInicio}}" alt="imagem do user" width="50px" height="50px" class="img-fluid rounded-circle">
       </li>
 
       <li class="nav-item dropdown">
@@ -21,7 +20,7 @@
           <a class="dropdown-item" routerLink='/tela-usuario'>Visualizar perfil</a>
           <div class="dropdown-divider"></div>
           <div *ngIf="this.tipoInicio == 'Adm'">
-            <a class="dropdown-item" routerLink='/user-delete' >Administrador</a>
+            <a class="dropdown-item" routerLink='/user-delete'>Administrador</a>
           </div>
         </div>
       </li>
@@ -29,26 +28,27 @@
 
 
 
-      
+
     </ul>
 
     <ul class="navbar-nav mr-auto ml-auto d-flex align-items-center">
-    <div class="nav d-flex justify-content-center text-dark" id="nav-tab" role="tablist">
-      <a class="nav-link active active  font-weight-bold text-dark" id="nav-todasPostagens-tab" data-toggle="tab"
-        href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as
-        Postagens</a>
-      <a class="nav-link font-weight-bold text-dark" id="nav-contact-tab" data-toggle="tab" href="#postagemTema"
-        role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema</a>
-    </div>
+      <div class="nav d-flex justify-content-center text-dark" id="nav-tab" role="tablist">
+        <a class="nav-link active active  font-weight-bold text-dark" id="nav-todasPostagens-tab" data-toggle="tab"
+          href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as
+          Postagens</a>
+        <a class="nav-link font-weight-bold text-dark" id="nav-contact-tab" data-toggle="tab" href="#postagemTema"
+          role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por tema</a>
+      </div>
 
 
 
- 
-    
-    <li class="nav-item">
-      <a class="btn nav-link font-weight-bold text-dark" data-toggle="modal" data-target="#novaPostagem">Realizar uma postagem</a>
-    </li>
-  </ul>
+
+
+      <li class="nav-item">
+        <a class="btn nav-link font-weight-bold text-dark" data-toggle="modal" data-target="#novaPostagem">Realizar uma
+          postagem</a>
+      </li>
+    </ul>
 
 
     <ul class="navbar-nav ml-auto d-flex align-items-center">
@@ -61,6 +61,8 @@
 </nav>
 <!-- NavBar transparent to solid -->
 
+<!-- <div class="row d-flex justify-content-center">
+  <div class="col-md-12"> -->
 <!-- carrossel -->
 <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-ride="carousel">
   <div class="carousel-inner">
@@ -84,7 +86,7 @@
   </button>
 </div>
 <!-- carrossel -->
- 
+
 <div class="container mb-5 mt-5 d-flex justify-content-center" id="postagens">
   <div class="tab-content mt-5" id="nav-tabContent">
 
@@ -109,7 +111,7 @@
                 <small>{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
                   'HH:mm'}}</small>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -150,6 +152,9 @@
 </div>
 <!-- Cards de publicações-->
 
+<!-- </div>
+</div> -->
+
 
 
 <!-- Modal -->
@@ -184,7 +189,7 @@
         </div>
 
         <div *ngIf="this.tipo == 'Normal'" class="form-group">
-          <label for="texto">Escolha um tema ou <a href="https://ad4nv1.github.io/FORMUL-RIO-PROJETO-INTEGRADOR/"
+          <label for="texto">Escolha um tema ou <a href="https://ad4nv1.github.io/FORM-PROJETO-INTEGRADOR/"
               target="_blank">sugira um novo</a>:</label>
           <select name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
             <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
@@ -210,5 +215,3 @@
     </div>
   </div>
 </div>
-
-
