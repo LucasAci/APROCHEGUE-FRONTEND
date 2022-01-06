@@ -11,9 +11,7 @@
     transition: all .2s ease-in-out}
 #teste3:hover{top:-4px;box-shadow:0 4px 3px #999}
 
-.laranja{
-    background-color: orangered;
-}
+
 
 
 #img-bg{
@@ -27,7 +25,7 @@
 }
 
 .laranja{
-    background-color: orangered;
+    background-color: #FF9936;
 }
 
 .p1 {

@@ -12,7 +12,7 @@
  #teste3:hover{top:-4px;box-shadow:0 4px 3px #999}
  
  .laranja{
-     background-color: orangered;
+     background-color: #FF9936;
  }
  
  
@@ -24,10 +24,6 @@
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
- }
- 
- .laranja{
-     background-color: orangered;
  }
  
  .p1 {

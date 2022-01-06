@@ -23,9 +23,6 @@
     background-size: cover;
 }
 
-.laranja{
-    background-color: orangered;
-}
 .p1 {
     font-family: 'Xilosa', sans-serif;
     
@@ -378,7 +375,7 @@ input[type=password]:focus {
 }
 
 .laranja{
-    background-color: orangered;
+    background-color: #FF9936;
 }
 .p1 {
     font-family: 'Xilosa', sans-serif;
