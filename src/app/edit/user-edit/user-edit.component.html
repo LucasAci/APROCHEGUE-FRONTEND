@@ -104,8 +104,10 @@
             <input (input)='confirmSenha($event)'  class="form-control" type="password" name="senha" id="senha" placeholder="senha">
             <label for="confirmSenha">Confirmar Senha</label>
             <input [(ngModel)]='usuario.senha'   class="form-control mb-3" type="password" name="confirmarsenha" id="confirmarsenha" placeholder="confirmar senha">
+           <div class="mb-2">
             <button type="submit" class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
             <button type="submit" class="btn btn-success" (click)='atualizar()' >Atualizar</button>
+            </div>
               </div>
               
 
