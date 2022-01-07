@@ -44,7 +44,6 @@ export class PostagemDeleteComponent implements OnInit {
     alert('Postagem apagada com sucesso!')
     this.router.navigate(['/inicio'])
    })
-
   }
 
 

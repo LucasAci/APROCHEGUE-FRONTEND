@@ -10,6 +10,11 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./tema.component.css']
 })
 export class TemaComponent implements OnInit {
+
+  nome = environment.nome
+
+  foto = environment.foto
+  
   tema: Tema = new Tema()
   listaTemas: Tema[]
   i: number

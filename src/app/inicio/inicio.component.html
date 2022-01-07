@@ -65,6 +65,117 @@
   <div class="col-md-12"> -->
 
 
+
+
+<!-- teste -->
+
+
+<!-- <div class="form-group">
+          <label for="titulo">Título</label>
+          <input [(ngModel)]='postagem.titulo' type="text" class='form-control' id="titulo"
+            placeholder="Digite o título">
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Foto da postagem</label>
+          <input [(ngModel)]='postagem.foto' type="text" class='form-control' id="foto"
+            placeholder="Insira o link da foto">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]='postagem.texto' class='form-control' name="texto" id="texto" rows="3"></textarea>
+
+        </div>
+
+        <div *ngIf="this.tipo == 'Normal'" class="form-group">
+          <label for="texto">Escolha um tema ou <a href="https://ad4nv1.github.io/FORM-PROJETO-INTEGRADOR/"
+              target="_blank">sugira um novo</a>:</label>
+          <select name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+          </select>
+
+        </div>
+
+
+        <div *ngIf="this.tipo == 'Adm'" class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:</label>
+          <select name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+          </select>
+
+
+        </div>
+
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button> -->
+
+
+
+
+<div class="container-fluid">
+
+  <div class="row bg-light d-flex align-items-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="titulo">Título</label>
+        <input [(ngModel)]='postagem.titulo' type="text" class='form-control' id="titulo"
+          placeholder="Digite o título">
+      </div>
+
+      <div class="form-group">
+        <label for="foto">Foto da postagem</label>
+        <input [(ngModel)]='postagem.foto' type="text" class='form-control' id="foto"
+          placeholder="Insira o link da foto">
+      </div>
+
+      <div class="form-group">
+        <label for="texto">Texto</label>
+        <textarea [(ngModel)]='postagem.texto' class='form-control' name="texto" id="texto" rows="3"></textarea>
+
+      </div>
+
+      <div *ngIf="this.tipo == 'Normal'" class="form-group">
+        <label for="texto">Escolha um tema ou <a href="https://ad4nv1.github.io/FORM-PROJETO-INTEGRADOR/"
+            target="_blank">sugira um novo</a>:</label>
+        <select name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
+          <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+        </select>
+
+      </div>
+
+
+      <div *ngIf="this.tipo == 'Adm'" class="form-group">
+        <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:</label>
+        <select name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
+          <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+        </select>
+
+
+      </div>
+
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+      <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
+
+
+
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-center">
+      <img src="../../assets/imgs/LOGO01-03.png" alt="" width="500px"
+        height="500px">
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+<!-- teste -->
+
 <div class="container mb-5 mt-5 d-flex justify-content-center" id="postagens">
   <div class="tab-content mt-5" id="nav-tabContent">
 
@@ -188,7 +299,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
       </div>
     </div>
   </div>
