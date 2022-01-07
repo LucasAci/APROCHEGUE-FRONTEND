@@ -1,3 +1,4 @@
+import { HtmlParser } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -30,6 +31,8 @@ export class InicioComponent implements OnInit {
   tipo = environment.tipo 
   foto: string
   email: string
+
+  modalClose: string = "Open"
  
 
 
@@ -106,12 +109,22 @@ export class InicioComponent implements OnInit {
     this.user.email= this.email 
       
      console.log(this.postagem)
-      this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-        this.postagem = resp
-        alert('Postagem realizada com sucesso!')
-        this.postagem = new Postagem()
-        this.getAllPostagens()
-      })
+            
+        if(this.postagem.texto == null || this.postagem.texto == "") alert('Preencha todos os campos!')
+        else if (this.postagem.titulo == null || this.postagem.titulo == "") alert('Preencha todos os campos!')
+        else if(this.postagem.tema.descricao == null)alert('Preencha todos os campos!')
+        else{
+          this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {  
+          this.postagem = resp
+          alert('Postagem realizada com sucesso!')
+          this.postagem = new Postagem()
+          this.getAllPostagens()
+          this.modalClose = "Close"
+        })
+          
+        }
+        
+      
   
     }
 
