@@ -1,4 +1,5 @@
 <!-- NavBar transparent to solid -->
+<!-- <div> -->
 <nav class="navbarNew navbar-expand-lg navbar-dark orange fixed-top">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
     aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -44,10 +45,10 @@
 
 
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="btn nav-link font-weight-bold text-dark" data-toggle="modal" data-target="#novaPostagem">Realizar uma
           postagem</a>
-      </li>
+      </li> -->
     </ul>
 
 
@@ -59,18 +60,50 @@
     </ul>
   </div>
 </nav>
+
+
 <!-- NavBar transparent to solid -->
 
-<!-- <div class="row d-flex justify-content-center">
-  <div class="col-md-12"> -->
+<div class="row d-flex justify-content-center">
+  <!-- <div class="col-md-12">  -->
+  <!-- carrossel -->
+  <!-- <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      
+    </div>
+    <div class="carousel-item">
+      
+    </div>
+    <div class="carousel-item">
+      
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div > 
+carrossel -->
 
+  <!--Jumbotron-->
+  <div class="jumbotron jumbotron-fluid laranja">
+    <div class="container">
+      <h1 class="display-4 text-white">Aprochegue</h1>
+      <p class="lead text-white">Venha construir a sua network e divulgar o seu trabalho!</p>
+    </div>
+  </div>
+  <!--/jumbotron-->
 
+  <div class="container-fluid">
 
-
-<!-- teste -->
-
-
-<!-- <div class="form-group">
+    <div class="row bg-light d-flex align-items-center">
+      <div class="col-md-6">
+        <div class="form-group">
           <label for="titulo">Título</label>
           <input [(ngModel)]='postagem.titulo' type="text" class='form-control' id="titulo"
             placeholder="Digite o título">
@@ -107,136 +140,90 @@
 
         </div>
 
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button> -->
+        <button type="button" class="btn btn-danger mr-3" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
 
-
-
-
-<div class="container-fluid">
-
-  <div class="row bg-light d-flex align-items-center">
-    <div class="col-md-6">
-      <div class="form-group">
-        <label for="titulo">Título</label>
-        <input [(ngModel)]='postagem.titulo' type="text" class='form-control' id="titulo"
-          placeholder="Digite o título">
-      </div>
-
-      <div class="form-group">
-        <label for="foto">Foto da postagem</label>
-        <input [(ngModel)]='postagem.foto' type="text" class='form-control' id="foto"
-          placeholder="Insira o link da foto">
-      </div>
-
-      <div class="form-group">
-        <label for="texto">Texto</label>
-        <textarea [(ngModel)]='postagem.texto' class='form-control' name="texto" id="texto" rows="3"></textarea>
-
-      </div>
-
-      <div *ngIf="this.tipo == 'Normal'" class="form-group">
-        <label for="texto">Escolha um tema ou <a href="https://ad4nv1.github.io/FORM-PROJETO-INTEGRADOR/"
-            target="_blank">sugira um novo</a>:</label>
-        <select name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
-          <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
-        </select>
-
-      </div>
-
-
-      <div *ngIf="this.tipo == 'Adm'" class="form-group">
-        <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:</label>
-        <select name="tema" id="tema" class='form-control' [(ngModel)]='idTema' (change)='getByIdTema()'>
-          <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
-        </select>
 
 
       </div>
 
-      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-      <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
-
-
-
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="../../assets/imgs/LOGO01-03.png" alt="" width="500px" height="500px">
+      </div>
     </div>
 
-    <div class="col-md-6 d-flex justify-content-center">
-      <img src="../../assets/imgs/LOGO01-03.png" alt="" width="500px"
-        height="500px">
-    </div>
+
+
+
   </div>
 
 
 
+  <!-- teste -->
 
-</div>
+  <div class="container mb-5 mt-5 d-flex justify-content-center" id="postagens">
+    <div class="tab-content mt-5" id="nav-tabContent">
 
+      <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
+        aria-labelledby="nav-todasPostagens-tab">
+        <div class='card-columns'>
+          <div class="card text-center" *ngFor='let item of listaPostagens'>
+            <div class="card-header">
+              <img src="{{item.foto}}" alt="foto" />
+            </div>
+            <div class="card-body">
+              <span class="tag tag-teal">{{item.tema.descricao}}</span>
+              <h4>
+                {{item.titulo}}
+              </h4>
+              <p>
+                {{item.texto}}
+              </p>
+              <div class="user">
+                <img src="{{item.usuario.foto}}" alt="user" />
+                <div class="user-info">
+                  <h5>{{item.usuario.email}}</h5>
+                  <small>{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
+                    'HH:mm'}}</small>
+                </div>
 
-
-<!-- teste -->
-
-<div class="container mb-5 mt-5 d-flex justify-content-center" id="postagens">
-  <div class="tab-content mt-5" id="nav-tabContent">
-
-    <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
-      <div class='card-columns'>
-        <div class="card text-center" *ngFor='let item of listaPostagens'>
-          <div class="card-header">
-            <img src="{{item.foto}}" alt="foto" />
-          </div>
-          <div class="card-body">
-            <span class="tag tag-teal">{{item.tema.descricao}}</span>
-            <h4>
-              {{item.titulo}}
-            </h4>
-            <p>
-              {{item.texto}}
-            </p>
-            <div class="user">
-              <img src="{{item.usuario.foto}}" alt="user" />
-              <div class="user-info">
-                <h5>{{item.usuario.email}}</h5>
-                <small>{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
-                  'HH:mm'}}</small>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-      <div class='card-columns'>
-        <div class="card text-center" *ngFor='let item of user.postagem'>
-          <div class="card-body">
-            <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <small class='text-muted'>Tema: {{item.tema.descricao}}</small>
-            <p class="card-text mt-3">{{item.texto}}</p>
-            <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
-                'HH:mm'}} </small></p>
-            <a [routerLink]="['/postagem-edit',item.id]" class="text-info mr-3" href="">Editar</a>
-            <a [routerLink]="['/postagem-delete',item.id]" class="text-danger" href="">Apagar</a>
+      <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+        <div class='card-columns'>
+          <div class="card text-center" *ngFor='let item of user.postagem'>
+            <div class="card-body">
+              <h5 class="card-title m-0">{{item.titulo}}</h5>
+              <small class='text-muted'>Tema: {{item.tema.descricao}}</small>
+              <p class="card-text mt-3">{{item.texto}}</p>
+              <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
+                  'HH:mm'}} </small></p>
+              <a [routerLink]="['/postagem-edit',item.id]" class="text-info mr-3" href="">Editar</a>
+              <a [routerLink]="['/postagem-delete',item.id]" class="text-danger" href="">Apagar</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
-      <div class='card-columns' *ngFor='let tema of listaTemas'>
-        <div class="card text-center" *ngFor='let item of tema.postagem'>
-          <div class="card-body">
-            <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <p class="card-text mt-3">{{item.texto}}</p>
-            <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
-                'HH:mm'}} </small></p>
-            <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+      <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
+        <div class='card-columns' *ngFor='let tema of listaTemas'>
+          <div class="card text-center" *ngFor='let item of tema.postagem'>
+            <div class="card-body">
+              <h5 class="card-title m-0">{{item.titulo}}</h5>
+              <p class="card-text mt-3">{{item.texto}}</p>
+              <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
+                  'HH:mm'}} </small></p>
+              <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
 <!-- Cards de publicações-->
@@ -247,7 +234,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="novaPostagem" data-backdrop="static" data-keyboard="false" tabindex="-1"
+<div class="modal fade " id="novaPostagem" data-backdrop="static" data-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -257,7 +244,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body ">
 
         <div class="form-group">
           <label for="titulo">Título</label>
@@ -304,3 +291,5 @@
     </div>
   </div>
 </div>
+
+<!-- </div> -->

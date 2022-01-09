@@ -9,8 +9,11 @@
   height: 200;
 }
 
+.laranja{
+  background-color: #FF9936;
+}
 .fundo{
-  background-color: darksalmon;
+  background-color: rgb(246, 247, 248);
 }
 /*TODO: clean it all up, finish flex, add aesthetics, icons, redefine to be relative to vh-vw, maybe rework v2 variant using scss and frames and real transitions? */
 html body {
@@ -59,7 +62,7 @@ a:hover {
   width: 200px;
   border-radius: 100px;
   background: rgb(0,159,255);
-  background: linear-gradient(121deg, rgba(255,255,255,0) 13%, rgb(6, 64, 100) 100%);
+  background: linear-gradient(121deg, #203946 13%, #778D99 100%);
   transition: all 500ms ease-in;
   transition-delay: 1s;
   margin: auto;

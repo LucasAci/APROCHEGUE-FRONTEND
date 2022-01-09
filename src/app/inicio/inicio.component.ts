@@ -49,7 +49,7 @@ export class InicioComponent implements OnInit {
   ngOnInit() {
   window.addEventListener('scroll', this.scroll, true)
   if (environment.token == ''){
-    this.router.navigate(['/entrar'])
+    this.router.navigate(['/sobre'])
   }
   this.authService.refreshToken()
   
