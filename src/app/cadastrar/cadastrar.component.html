@@ -1,161 +1,169 @@
-    <div class="wrapper fadeInDown p2">
- 
+<div class="wrapper fadeInDown p2">
 
-        <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
-                    
-        <style>
-            @import url('http://fonts.cdnfonts.com/css/gotham');
-    </style>
-    
-    
-    
-        <link href="http://fonts.cdnfonts.com/css/xilosa" rel="stylesheet">
-        <style>
-            @import url('http://fonts.cdnfonts.com/css/xilosa');
-            </style>
-        <div id="formContent">
-          <!-- Tabs Titles -->
-          <h2 class="active p1 "> Cadastrar </h2>
-          <!-- <h2 class="inactive underlineHover"> <a href=""></a>  Inscreva-se </h2> -->
-      
-          <!-- Icon -->
-          <div class="fadeIn first mb-3">
-            <img src="../../assets/imgs/LOGO01-03.png" alt="logo" width="100px" height="100px">
-          </div>
-      
-          <!-- Login Form -->
-          <form>
-            <input [(ngModel)] = 'usuario.nome' class="form-control" type="text" name="Seu nome"
-            id="usuario" placeholder="Seu nome">
 
-            <input [(ngModel)] ='usuario.email'  class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuario">
+  <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
 
-            <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="imagem" id="imagem" placeholder="Link da foto">
-    
-            <input (input)='confirmSenha($event)'  class="form-control" type="password" name="senha" id="senha" placeholder="senha">
+  <style>
+    @import url('http://fonts.cdnfonts.com/css/gotham');
+  </style>
 
-            <input [(ngModel)]='usuario.senha'   class="form-control" type="password" name="confirmarsenha" id="confirmarsenha" placeholder="confirmar senha">
 
-            <label  for="termos">Termos: </label>
-            <input class="ml-2" type="checkbox" name="Termos" data-toggle="cadastrarButton" id="Termosid" value="aceitar" > 
-                        
-            <a data-toggle="modal" data-target="#termosDeUso" class='linkModal'> Li e aceito.</a>
-          
-            <!-- <select class="form-control"  name="tipo" id="tipo" placeholder="selecione o tipo do usuario" (change)='tipoUser($event)'>
+
+  <link href="http://fonts.cdnfonts.com/css/xilosa" rel="stylesheet">
+  <style>
+    @import url('http://fonts.cdnfonts.com/css/xilosa');
+  </style>
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active p1 "> Cadastrar </h2>
+    <!-- <h2 class="inactive underlineHover"> <a href=""></a>  Inscreva-se </h2> -->
+
+    <!-- Icon -->
+    <div class="fadeIn first mb-3">
+      <img src="../../assets/imgs/LOGO01-03.png" alt="logo" width="100px" height="100px">
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="Seu nome" id="usuario"
+        placeholder="Seu nome">
+
+      <input [(ngModel)]='usuario.email' class="form-control" type="text" name="usuario" id="usuario"
+        placeholder="Usuário">
+
+      <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="imagem" id="imagem"
+        placeholder="Link da foto">
+
+      <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+        placeholder="Senha">
+
+      <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmarsenha" id="confirmarsenha"
+        placeholder="Confirmar senha">
+
+      <label for="termos">Termos: </label>
+      <input class="ml-2" type="checkbox" name="Termos" data-toggle="cadastrarButton" id="Termosid" value="aceitar">
+
+      <a data-toggle="modal" data-target="#termosDeUso" class='linkModal'> Li e aceito.</a>
+
+      <!-- <select class="form-control"  name="tipo" id="tipo" placeholder="selecione o tipo do usuario" (change)='tipoUser($event)'>
                 <option >Selecione um tipo de usuario</option>
                 <option value="administrador">Administrador</option>
                 <option value="padrão">Padrão</option>
             </select> -->
 
-            <div class="d-flex justify-content-center mt-5 ">
-                <button type="submit" class="btn h3 mr-3 text-light" (click)='cadastrar()' >Cadastrar</button>
-                <button type="submit" class="btn h4 text-light" routerLink='/entrar'>Cancelar</button>
-            </div>
+      <div class="d-flex justify-content-center mt-5 ">
+        <button type="submit" class="btn h3 mr-3 text-light" (click)='cadastrar()'>Cadastrar</button>
+        <button type="submit" class="btn h4 text-light" routerLink='/entrar'>Cancelar</button>
+      </div>
 
-            <div>
-              <a class="d-flex justify-content-center btn btn-outline-dark mt-5 mb-8" href="https://ad4nv1.github.io/FORM-PROJETO-INTEGRADOR/" target="_blank">Solicitar conta de administrador</a>
-          </div>
-
-           
-          </form>
-          <div>
-            <h1> </h1>
-          </div>
-      
-          
-        </div>
-    
-        
+      <div>
+        <a class="d-flex justify-content-center btn btn-outline-dark mt-5 mb-8"
+          href="https://ad4nv1.github.io/FORM-PROJETO-INTEGRADOR/" target="_blank">Solicitar conta de administrador</a>
       </div>
 
 
-
-
- <!-- Modal  -->
- <div class="modal fade" id="termosDeUso" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Termos de uso</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-dismiss="modal">Voltar</button>
-        </div>
-      </div>
+    </form>
+    <div>
+      <h1> </h1>
     </div>
-  </div> 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="termosDeUso" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Termos de uso</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-           <p>Parágrafo único. As normas gerais contidas nesta Lei são de interesse nacional e devem ser observadas pela União, Estados, Distrito Federal e Municípios.      (Incluído pela Lei nº 13.853, de 2019)      Vigência</p> 
-
-               <p>Art. 2º A disciplina da proteção de dados pessoais tem como fundamentos:</p> 
-                
-               <p>I - o respeito à privacidade;</p> 
-                
-               <p>II - a autodeterminação informativa;</p> 
-                
-               <p>III - a liberdade de expressão, de informação, de comunicação e de opinião;</p> 
-                
-               <p>IV - a inviolabilidade da intimidade, da honra e da imagem;</p> 
-                
-               <p>V - o desenvolvimento econômico e tecnológico e a inovação;</p> 
-                
-               <p>VI - a livre iniciativa, a livre concorrência e a defesa do consumidor; e</p> 
-                
-               <p>VII - os direitos humanos, o livre desenvolvimento da personalidade, a dignidade e o exercício da cidadania pelas pessoas naturais.</p> 
-        </div>
-
-      </div>
-    </div>
   </div>
 
 
+</div>
+
+
+
+
+<!-- Modal  -->
+<div class="modal fade" id="termosDeUso" data-backdrop="static" data-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Termos de uso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Termos de uso:</p>
+
+        <p>Prezamos por um ambiente saudável e respeitoso, portanto não será tolerada:</p>
+
+        <p>I. Expresse-se respeitosamente, lembre-se de que todos têm o direito de emitir sua própria opinião e seu
+          ponto de vista, participe no sentido de manter um clima cordial de diálogo e na promoção de um debate
+          enriquecedor para todos;</p>
+
+        <p>II. Não repasse, em nome próprio ou de terceiros, spams, correntes ou links suspeitos, muito menos os que
+          contenham conteúdos fraudulentos ou danosos, que possam causar algum prejuízo aos demais usuários;</p>
+
+        <p>III. Não divulgue informações confidenciais ou pessoais, como endereços, nomes de familiares, números de
+          telefones, de documentos de identificação, de cadastros em programas sociais, de valores recebidos ou qualquer
+          outro dado que possa gerar alguma exposição desnecessária ou situação de risco, para você ou para terceiros;
+        </p>
+
+        <p>IV. Não publique mensagens com conteúdos abusivos, ilegais, nocivos, ameaçadores, profanos, difamatórios,
+          discriminatórios, ofensivos ou obscenos, nem que caracterizem calúnia, difamação, assédio ou discriminação de
+          qualquer espécie;</p>
+
+        <p>V. Certifique-se da veracidade dos fatos antes de divulgá-los, para evitar a disseminação das chamadas fake
+          news, especialmente notícias falsas que contenham temas que afetem a reputação de terceiros;</p>
+
+        <p>VI. Não utilize linguagem chula, de baixo calão, depreciativa ou que contenha tom inflamatório, com insultos
+          ou incitação ao ódio e à violência. Contribua para um diálogo respeitoso ou uma discussão elevada e
+          proveitosa;</p>
+
+        <p>VII. Não publique conteúdos pejorativos, que façam uso irresponsável da imagem de terceiros, de servidores e
+          autoridades públicas ou de órgãos e entidades governamentais. Todos ganham quando aprimoramos os serviços
+          prestados ao cidadão;</p>
+        <p>VIII. Não utilize o presente espaço para realizar propaganda eleitoral ou campanha político-partidária.</p>
+        <p>O usuário administrador poderá redigir a integridade do site, e caso o usuário padrão infringir os termos de
+          uso, ele terá sua conta suspensa e, consequentemente, notificada dos motivos levados em consideração na tomada
+          de decisão desta medida. </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
 
-  joao da silva
-  joao@email.com
-  123456789
-  123456789
-  https://github.com/ad4nv1
 
-  Agricultura e família
 
-  Agricultura e família Agricultura e família Agricultura e família Agricultura e família Agricultura e família
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="termosDeUso" data-backdrop="static" data-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Termos de uso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+</div>
