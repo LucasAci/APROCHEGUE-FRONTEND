@@ -55,7 +55,8 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
-  min-height: 250px;
+  min-height: 350px;
+  max-height: 350px;
 }
 
 .tag {
