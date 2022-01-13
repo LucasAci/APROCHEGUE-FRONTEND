@@ -39,21 +39,19 @@
 
       <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmarsenha" id="confirmarsenha"
         placeholder="Confirmar senha">
+      <div>
+        <label for="termos">Termos: </label>
+        <input class="ml-2" type="checkbox" name="Termos" data-toggle="cadastrarButton" id="Termosid" value="aceitar">
 
-      <label for="termos">Termos: </label>
-      <input class="ml-2" type="checkbox" name="Termos" data-toggle="cadastrarButton" id="Termosid" value="aceitar">
+        <a data-toggle="modal" data-target="#termosDeUso" class='linkModal'> Li e aceito.</a>
+      </div>
 
-      <a data-toggle="modal" data-target="#termosDeUso" class='linkModal'> Li e aceito.</a>
 
-      <!-- <select class="form-control"  name="tipo" id="tipo" placeholder="selecione o tipo do usuario" (change)='tipoUser($event)'>
-                <option >Selecione um tipo de usuario</option>
-                <option value="administrador">Administrador</option>
-                <option value="padrão">Padrão</option>
-            </select> -->
+
 
       <div class="d-flex justify-content-center mt-5 ">
         <button type="submit" class="btn h3 mr-3 text-light" (click)='cadastrar()'>Cadastrar</button>
-        <button type="submit" class="btn h4 text-light" routerLink='/entrar'>Cancelar</button>
+        <button type="submit" class="btn h4 text-light" routerLink='/sobre'>Cancelar</button>
       </div>
 
       <div>
