@@ -57,66 +57,63 @@
 
 
 
-  <body  >
-    
+<body>
 
-    <div class="wrapper fadeInDown p2">
- 
 
-        <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
-                    
-        <style>
-            @import url('http://fonts.cdnfonts.com/css/gotham');
+  <div class="wrapper fadeInDown p2">
+
+
+    <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+
+    <style>
+      @import url('http://fonts.cdnfonts.com/css/gotham');
     </style>
-    
-    
-    
-        <link href="http://fonts.cdnfonts.com/css/xilosa" rel="stylesheet">
-        <style>
-            @import url('http://fonts.cdnfonts.com/css/xilosa');
-            </style>
-        <div id="formContent">
-          <p class="active p1 "> Atualizar meu usuário</p>
-      
-          <div class="fadeIn first mb-1">
-            <img src="../../assets/imgs/LOGO01-03.png" alt="logo" width="90px" height="90px">
-          </div>
-      
-          <form>
-            <div class="row d-flex justify-content-center">
-              <div class="col-md-10">
 
-            <label for="nome">Nome</label>
-            <input [(ngModel)] = 'usuario.nome' class="form-control" type="text" name="Seu nome"
-            id="usuario" placeholder="Seu nome">
+
+
+    <link href="http://fonts.cdnfonts.com/css/xilosa" rel="stylesheet">
+    <style>
+      @import url('http://fonts.cdnfonts.com/css/xilosa');
+    </style>
+    <div id="formContent">
+      <p class="active p1 "> Atualizar meu usuário</p>
+
+      <div class="fadeIn first mb-1">
+        <img src="../../assets/imgs/LOGO01-03.png" alt="logo" width="90px" height="90px">
+      </div>
+
+      <form>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10">
             
+            <div>
+            <label for="nome">Nome</label>
+            <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="Seu nome" id="usuario"
+              placeholder="Seu nome">
+            </div>
+            <div>
             <label for="usuario">Usuário</label>
-            <input [(ngModel)] ='usuario.email'  class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuario">
-
+            <input [(ngModel)]='usuario.email' class="form-control" type="text" name="usuario" id="usuario"
+              placeholder="Usuario">
+            </div>
+            <div>
             <label for="foto">Link da Foto</label>
-            <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="imagem" id="imagem" placeholder="Link da foto">
-
+            <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="imagem" id="imagem"
+              placeholder="Link da foto">
+            </div>
+            <div>
             <label for="senha">Senha</label>
-            <input (input)='confirmSenha($event)'  class="form-control" type="password" name="senha" id="senha" placeholder="Senha">
+            <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+              placeholder="Senha">
+            </div>
+            <div>
             <label for="confirmSenha">Confirmar Senha</label>
-            <input [(ngModel)]='usuario.senha'   class="form-control mb-3" type="password" name="confirmarsenha" id="confirmarsenha" placeholder="confirmar senha">
-           <div class="mb-2">
-            <button type="submit" class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
-            <button type="submit" class="btn btn-success" (click)='atualizar()' >Atualizar</button>
+            <input [(ngModel)]='usuario.senha' class="form-control mb-3" type="password" name="confirmarsenha"
+              id="confirmarsenha" placeholder="confirmar senha">
+            </div>
+            <div class="mb-2">
+              <button type="submit" class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
+              <button type="submit" class="btn btn-success" (click)='atualizar()'>Atualizar</button>
             </div>
 
-              </div>
-              
-
-
-
-
-
-
-              
-
-
-
-
-
-
+          </div>
